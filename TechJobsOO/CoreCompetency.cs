@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace TechJobsOO
 {
-    public class CoreCompetency
+    public class CoreCompetency : JobField
     {
         public int Id { get; }
         private static int nextId = 1;
@@ -26,15 +26,6 @@ namespace TechJobsOO
                    Id == coreCompetency.Id;
         }
 
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Id);
-        }
-
-        public override string ToString()
-        {
-            return Value;
-        }
     }
     
 }

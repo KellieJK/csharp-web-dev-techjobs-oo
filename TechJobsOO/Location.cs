@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace TechJobsOO
 {
-    public class Location
+    public class Location : JobField
     {
         public int Id { get; }
         private static int nextId = 1;
@@ -24,16 +24,6 @@ namespace TechJobsOO
         {
             return obj is Location location &&
                    Id == location.Id;
-        }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Id);
-        }
-
-        public override string ToString()
-        {
-            return Value;
         }
     }
 }

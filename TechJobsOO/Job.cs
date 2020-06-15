@@ -3,7 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace TechJobsOO
 {
-    public class Job
+    public class Job : JobField
     {
         public int Id { get; }
         private static int nextId = 1;
@@ -39,6 +39,11 @@ namespace TechJobsOO
         //--------------------done----------------------------
 
         /////////need help with this-----help help--------
+      
+        /// 
+        /// 
+      
+        
         public override string ToString()
         {
             string result = "\n";
@@ -47,10 +52,10 @@ namespace TechJobsOO
                 result += $"Name: Data not available\n";
             else    
             result += $"Name: {Name}\n";
-            result += $"Employer: {Employer.employerName.ToString()}\n";
-            result += $"Location: {Location.EmployerLocation}";
-            result += $"Position Type: {PositionType.jobType.ToString()} \n";
-            result += $"Core Competency: {CoreCompetency.jobCoreCompetency}\n";
+            result += $"Employer: {Employer.value}\n";
+            result += $"Location: {Location.value}";
+            result += $"Position Type: {PositionType.value} \n";
+            result += $"Core Competency: {CoreCompetency.value}\n";
             result += "\n";
             return result;
         }
@@ -73,15 +78,6 @@ namespace TechJobsOO
                    Id == jobs.Id;
         }
 
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Id);
-        }
-
-        public string ToString(string value)
-        {
-            return value;
-        }
-
+     
     }
 }
