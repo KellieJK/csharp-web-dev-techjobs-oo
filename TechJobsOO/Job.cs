@@ -38,31 +38,34 @@ namespace TechJobsOO
         // TODO: Generate Equals() and GetHashCode() methods.
         //--------------------done----------------------------
 
-
-        //public override string ToString()
-        //{ 
-        //string result = "\n";
-        //result += $"ID: {Id}\n";
-        //if (string.IsNullOrEmpty(Name))            
-        //    result += $"Name: Data not available\n";            
-        //else            
-        //result += $"Name: {Name}\n";            
-        //result += $"Employer: {Employer.Value.ToString() "Data not available"}";
-        //result += $"Location: {Location.Value.ToString("Data not available")}\n";
-        //result += $"Position Type: {PositionType?.ToString() ?? "Data not available"}\n";
-        //result += $"Core Competency: {CoreCompetency?.ToString() ?? "Data not available"}\n";
-        //result += "\n";
-        //return result; 
-        //}
-
-
+        /////////need help with this-----help help--------
         public override string ToString()
         {
             string result = "\n";
+            result += $"ID: {Id}\n";
+            if (string.IsNullOrEmpty(Name))
+                result += $"Name: Data not available\n";
+            else    
+            result += $"Name: {Name}\n";
+            result += $"Employer: {Employer.employerName.ToString()}\n";
+            result += $"Location: {Location.EmployerLocation}";
+            result += $"Position Type: {PositionType.jobType.ToString()} \n";
+            result += $"Core Competency: {CoreCompetency.jobCoreCompetency}\n";
             result += "\n";
             return result;
         }
 
+
+        //public override string ToString()
+        //{
+        //    string result = "\n";
+        //    result += "\n";
+        //    return result;
+        //}
+
+
+
+        /////////need help with this-----help help--------
 
         public override bool Equals(object obj)
         {
