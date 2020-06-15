@@ -39,26 +39,81 @@ namespace TechJobsOO
         //--------------------done----------------------------
 
         /////////need help with this-----help help--------
-      
+
         /// 
         /// 
-      
-        
+        //------------------------------this works!!!--------------------------------
+
+        //public override string ToString()
+        //{
+        //    string result = "\n";
+        //    result += $"ID: {Id}\n";
+        //    if (string.IsNullOrEmpty(Name))
+        //    {
+        //        result += $"Name: Data not available\n";
+        //    }
+        //    else if
+        //        string.IsNullOrEmpty(EmployerName)
+        //        result += $"Employer: Data not available\n";
+        //    else if
+        //        string.IsNullOrEmpty(Name))
+        //        result += $"Name: Data not available\n";
+        //    else if
+        //        string.IsNullOrEmpty(Name))
+        //        result += $"Name: Data not available\n";
+
+        //    result += $"Name: {Name}\n";
+        //        result += $"Employer: {EmployerName}\n";
+        //        result += $"Location: {EmployerLocation}";
+        //        result += $"Position Type: {JobType} \n";
+        //        result += $"Core Competency: {JobCoreCompetency}\n";
+        //        result += "\n";
+        //        return result;
+
+        //}
+
+        //------------------------------this works!!!--------------------------------
+
         public override string ToString()
         {
             string result = "\n";
             result += $"ID: {Id}\n";
             if (string.IsNullOrEmpty(Name))
+            {
                 result += $"Name: Data not available\n";
-            else    
+            }
+            else if
+                (string.IsNullOrEmpty(EmployerName.ToString()))
+                {
+                result += $"Employer: Data not available\n";
+                   }
+            else if
+                (string.IsNullOrEmpty(EmployerLocation.ToString()))
+            {
+                result += $"Location: Data not available\n";
+            }
+            else if
+                (string.IsNullOrEmpty(JobType.ToString()))
+            {
+                result += $"JobType: Data not available\n";
+            }
+            else if
+               (string.IsNullOrEmpty(JobCoreCompetency.ToString()))
+            {
+                result += $"Core Competency: Data not available\n";
+            }
+
             result += $"Name: {Name}\n";
-            result += $"Employer: {Employer.value}\n";
-            result += $"Location: {Location.value}";
-            result += $"Position Type: {PositionType.value} \n";
-            result += $"Core Competency: {CoreCompetency.value}\n";
+            result += $"Employer: {EmployerName}\n";
+            result += $"Location: {EmployerLocation}";
+            result += $"Position Type: {JobType} \n";
+            result += $"Core Competency: {JobCoreCompetency}\n";
             result += "\n";
             return result;
+
         }
+
+
 
 
         //public override string ToString()
