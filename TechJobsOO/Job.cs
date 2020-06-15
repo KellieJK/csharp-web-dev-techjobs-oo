@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Diagnostics.CodeAnalysis;
 
 namespace TechJobsOO
 {
@@ -7,7 +7,7 @@ namespace TechJobsOO
     {
         public int Id { get; }
         private static int nextId = 1;
-       
+
 
         public string Name { get; set; }
         public Employer EmployerName { get; set; }
@@ -17,7 +17,7 @@ namespace TechJobsOO
 
         // TODO: Add the two necessary constructors.
 
-       public Job()
+        public Job()
         {
             Id = nextId;
             nextId++;
@@ -29,7 +29,7 @@ namespace TechJobsOO
             EmployerName = employerName;
             EmployerLocation = employerLocation;
             JobType = jobType;
-            JobCoreCompetency= jobCoreCompetency;
+            JobCoreCompetency = jobCoreCompetency;
 
         }
 
@@ -38,7 +38,30 @@ namespace TechJobsOO
         // TODO: Generate Equals() and GetHashCode() methods.
         //--------------------done----------------------------
 
-        
+
+        //public override string ToString()
+        //{ 
+        //string result = "\n";
+        //result += $"ID: {Id}\n";
+        //if (string.IsNullOrEmpty(Name))            
+        //    result += $"Name: Data not available\n";            
+        //else            
+        //result += $"Name: {Name}\n";            
+        //result += $"Employer: {Employer.Value.ToString() "Data not available"}";
+        //result += $"Location: {Location.Value.ToString("Data not available")}\n";
+        //result += $"Position Type: {PositionType?.ToString() ?? "Data not available"}\n";
+        //result += $"Core Competency: {CoreCompetency?.ToString() ?? "Data not available"}\n";
+        //result += "\n";
+        //return result; 
+        //}
+
+
+        public override string ToString()
+        {
+            string result = "\n";
+            result += "\n";
+            return result;
+        }
 
 
         public override bool Equals(object obj)
