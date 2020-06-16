@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 namespace TechJobsOO
 {
     public class CoreCompetency : JobField
@@ -9,11 +9,6 @@ namespace TechJobsOO
         {
         }
 
-        public override bool Equals(object obj)
-        {
-            return obj is CoreCompetency coreCompetency &&
-                   Id == coreCompetency.Id;
-        }
 
     }
     

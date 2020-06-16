@@ -24,6 +24,13 @@ namespace TechJobsOO
         }
 
 
+        public override bool Equals(object obj)
+        {
+            return obj is JobField &&
+                   Id == Id;
+        }
+
+
         public override int GetHashCode()
         {
             return HashCode.Combine(Id);
@@ -34,8 +41,6 @@ namespace TechJobsOO
             return Value;
         }
 
-        //add Equals() method 
-        //add incremental (++)
 
     }
 }

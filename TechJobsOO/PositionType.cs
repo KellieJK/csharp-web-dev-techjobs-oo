@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 namespace TechJobsOO
 {
     public class PositionType : JobField
@@ -8,12 +8,7 @@ namespace TechJobsOO
             {
              }
 
-        public override bool Equals(object obj)
-        {
-            return obj is PositionType positionType &&
-                   Id == positionType.Id;
-           
-        } 
+     
        
     }
 }
