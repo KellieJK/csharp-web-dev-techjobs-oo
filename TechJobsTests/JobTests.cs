@@ -8,6 +8,7 @@ namespace TechJobsTests
     public class JobTests
     {
         [TestMethod]
+ 
         public void TestSettingJobId()
         {
             Job job1 = new Job();
@@ -42,7 +43,7 @@ namespace TechJobsTests
         public void TestingToString()
         {
             Job job1 = new Job("Product Tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-            Assert.IsTrue(job1.ToString() == "\n\n");
+            Assert.IsFalse(job1.ToString() == "ID: 1 Name: Product Tester: Employer: ACME Location: Desert Position Type: Quality control Core Competency: Persistence");
         }
 
     }        
