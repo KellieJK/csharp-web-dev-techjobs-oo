@@ -6,10 +6,24 @@ namespace TechJobsOO
     public abstract class JobField
     {
 
-        public int Id { get; set;  }
+        public int Id { get;  }
         public static int nextId = 1;
         public string Value { get; set; }
-      
+
+
+        public JobField()
+        {
+            Id = nextId;
+            nextId++;
+        }
+
+
+        public JobField(string value) : this()
+        {
+            Value = value;
+        }
+
+
         public override int GetHashCode()
         {
             return HashCode.Combine(Id);
@@ -19,6 +33,9 @@ namespace TechJobsOO
         {
             return Value;
         }
+
+        //add Equals() method 
+        //add incremental (++)
 
     }
 }

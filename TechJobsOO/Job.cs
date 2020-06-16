@@ -118,6 +118,8 @@ namespace TechJobsOO
                    Id == jobs.Id;
         }
 
-     
+     //add back in gethashcode (in both job class and jobfield)
+
+
     }
 }

@@ -5,18 +5,8 @@ namespace TechJobsOO
     public class Location : JobField
     {
        
-        private static int nextId = 1;
-       
-
-        public Location()
+        public Location(string value) : base(value)
         {
-            Id = nextId;
-            nextId++;
-        }
-
-        public Location(string value) : this()
-        {
-            Value = value;
         }
 
         public override bool Equals(object obj)

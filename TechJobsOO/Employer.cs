@@ -4,17 +4,9 @@ namespace TechJobsOO
     public class Employer : JobField
     {
        
-        private static int nextId = 1;
-        
-        public Employer()
+    
+        public Employer(string value) : base(value)
         {
-            Id = nextId;
-            nextId++;
-        }
-
-        public Employer(string value) : this()
-        {
-            Value = value;
         }
 
         public override bool Equals(object obj)

@@ -4,17 +4,9 @@ namespace TechJobsOO
 {
     public class CoreCompetency : JobField
     { 
-        private static int nextId = 1;
-
-        public CoreCompetency()
+    
+        public CoreCompetency(string value) : base(value)
         {
-            Id = nextId;
-            nextId++;
-        }
-
-        public CoreCompetency(string value) : this()
-        {
-            Value = value;
         }
 
         public override bool Equals(object obj)
