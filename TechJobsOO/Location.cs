@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace TechJobsOO
 {
     public class Location : JobField
     {
-        public int Id { get; }
+       
         private static int nextId = 1;
-        public string Value { get; set; }
+       
 
         public Location()
         {

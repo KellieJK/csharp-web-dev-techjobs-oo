@@ -33,45 +33,8 @@ namespace TechJobsOO
 
         }
 
-
-        //--------------------done----------------------------
-        // TODO: Generate Equals() and GetHashCode() methods.
-        //--------------------done----------------------------
-
-        /////////need help with this-----help help--------
-
         /// 
         /// 
-        //------------------------------this works!!!--------------------------------
-
-        //public override string ToString()
-        //{
-        //    string result = "\n";
-        //    result += $"ID: {Id}\n";
-        //    if (string.IsNullOrEmpty(Name))
-        //    {
-        //        result += $"Name: Data not available\n";
-        //    }
-        //    else if
-        //        string.IsNullOrEmpty(EmployerName)
-        //        result += $"Employer: Data not available\n";
-        //    else if
-        //        string.IsNullOrEmpty(Name))
-        //        result += $"Name: Data not available\n";
-        //    else if
-        //        string.IsNullOrEmpty(Name))
-        //        result += $"Name: Data not available\n";
-
-        //    result += $"Name: {Name}\n";
-        //        result += $"Employer: {EmployerName}\n";
-        //        result += $"Location: {EmployerLocation}";
-        //        result += $"Position Type: {JobType} \n";
-        //        result += $"Core Competency: {JobCoreCompetency}\n";
-        //        result += "\n";
-        //        return result;
-
-        //}
-
         //------------------------------this works!!!--------------------------------
 
         public override string ToString()
@@ -82,30 +45,32 @@ namespace TechJobsOO
             {
                 result += $"Name: Data not available\n";
             }
-            else if
-                (string.IsNullOrEmpty(EmployerName.ToString()))
-                {
+            if
+                (EmployerName.ToString() == "")
+            {
                 result += $"Employer: Data not available\n";
-                   }
-            else if
-                (string.IsNullOrEmpty(EmployerLocation.ToString()))
+            }
+            if
+                (EmployerLocation.ToString() == "")
             {
                 result += $"Location: Data not available\n";
             }
-            else if
-                (string.IsNullOrEmpty(JobType.ToString()))
+            if
+                (JobType.ToString() == "")
             {
                 result += $"JobType: Data not available\n";
             }
-            else if
-               (string.IsNullOrEmpty(JobCoreCompetency.ToString()))
+            if
+               (JobCoreCompetency.ToString() == null)
             {
                 result += $"Core Competency: Data not available\n";
             }
 
+            else
+
             result += $"Name: {Name}\n";
             result += $"Employer: {EmployerName}\n";
-            result += $"Location: {EmployerLocation}";
+            result += $"Location: {EmployerLocation}\n";
             result += $"Position Type: {JobType} \n";
             result += $"Core Competency: {JobCoreCompetency}\n";
             result += "\n";
@@ -113,19 +78,6 @@ namespace TechJobsOO
 
         }
 
-
-
-
-        //public override string ToString()
-        //{
-        //    string result = "\n";
-        //    result += "\n";
-        //    return result;
-        //}
-
-
-
-        /////////need help with this-----help help--------
 
         public override bool Equals(object obj)
         {
