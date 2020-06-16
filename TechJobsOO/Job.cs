@@ -37,46 +37,79 @@ namespace TechJobsOO
         /// 
         //------------------------------this works!!!--------------------------------
 
+        //public override string ToString()
+        //{
+        //    string result = "\n";
+        //    result += $"ID: {Id}\n";
+        //    if (string.IsNullOrEmpty(Name))
+        //    {
+        //        result += $"Name: Data not available\n";
+        //    }
+        //    if
+        //        (EmployerName.ToString() == "")
+        //    {
+        //        result += $"Employer: Data not available\n";
+        //    }
+        //    if
+        //        (EmployerLocation.ToString() == "")
+        //    {
+        //        result += $"Location: Data not available\n";
+        //    }
+        //    if
+        //        (JobType.ToString() == "")
+        //    {
+        //        result += $"JobType: Data not available\n";
+        //    }
+        //    if
+        //       (JobCoreCompetency.ToString() == null)
+        //    {
+        //        result += $"Core Competency: Data not available\n";
+        //    }
+
+        //    else
+
+        //    result += $"Name: {Name}\n";
+        //    result += $"Employer: {EmployerName}\n";
+        //    result += $"Location: {EmployerLocation}\n";
+        //    result += $"Position Type: {JobType} \n";
+        //    result += $"Core Competency: {JobCoreCompetency}\n";
+        //    result += "\n";
+        //    return result;
+
+        //}
+        ///----saving for reference
+
         public override string ToString()
         {
             string result = "\n";
             result += $"ID: {Id}\n";
-            if (string.IsNullOrEmpty(Name))
-            {
+            if (Name.ToString() == "")
                 result += $"Name: Data not available\n";
-            }
+            else
+                result += $"Name: {Name}\n";
             if
                 (EmployerName.ToString() == "")
-            {
                 result += $"Employer: Data not available\n";
-            }
+            else
+                result += $"Employer: {EmployerName}\n";
             if
                 (EmployerLocation.ToString() == "")
-            {
                 result += $"Location: Data not available\n";
-            }
+            else
+                result += $"Location: {EmployerLocation}\n";
             if
                 (JobType.ToString() == "")
-            {
                 result += $"JobType: Data not available\n";
-            }
+            else
+                result += $"Position Type: {JobType} \n";
             if
                (JobCoreCompetency.ToString() == null)
-            {
                 result += $"Core Competency: Data not available\n";
-            }
-
             else
-
-            result += $"Name: {Name}\n";
-            result += $"Employer: {EmployerName}\n";
-            result += $"Location: {EmployerLocation}\n";
-            result += $"Position Type: {JobType} \n";
-            result += $"Core Competency: {JobCoreCompetency}\n";
-            result += "\n";
+                result += $"Core Competency: {JobCoreCompetency}\n";
             return result;
-
         }
+
 
 
         public override bool Equals(object obj)
